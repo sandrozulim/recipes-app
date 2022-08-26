@@ -1,0 +1,19 @@
+@import "./config.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+html {
+  @media only screen and (max-width: 860px) {
+    font-size: 80%;
+  }
+}
+
+body {
+  background-color: $primary-color;
+  @include flex(row, center, flex-start, wrap);
+}
