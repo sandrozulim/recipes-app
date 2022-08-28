@@ -34,7 +34,8 @@ body {
   grid-template-columns: 1fr 2fr;
   gap: 3rem 1rem;
   width: 90vw;
-  max-width: 1100px; }
+  max-width: 1100px;
+  margin-top: 2rem; }
 
 .header {
   display: flex;
@@ -100,7 +101,8 @@ body {
 
 .search-results {
   background-color: #dcd7c9;
-  border-radius: 0.5rem; }
+  border-radius: 0.5rem;
+  min-height: 70vh; }
   .search-results__results {
     display: flex;
     flex-direction: column;

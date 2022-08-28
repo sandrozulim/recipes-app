@@ -26,6 +26,7 @@
   gap: 3rem 1rem;
   width: 90vw;
   max-width: 1100px;
+  margin-top: 2rem;
 }
 
 .header {
@@ -90,6 +91,7 @@
 .search-results {
   background-color: $secondary-color;
   border-radius: 0.5rem;
+  min-height: 70vh;
 
   &__results {
     @include flex(column, center, center, nowrap);
