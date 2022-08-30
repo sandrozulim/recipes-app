@@ -95,14 +95,44 @@
 
   &__results {
     @include flex(column, center, center, nowrap);
-    gap: 0.8rem;
+    gap: 1.7rem;
     list-style-type: none;
-    padding: 0.5rem;
+    padding: 1.4rem;
     font-size: 1.3rem;
+
+    li {
+      text-align: center;
+    }
+
+    a {
+      all: unset;
+      cursor: pointer;
+    }
 
     p {
       color: $tertiary-color;
       font-size: 1.1rem;
+    }
+  }
+
+  &__pagination {
+    @include flex(row, space-between, center, nowrap);
+    padding: 1.4rem;
+
+    &--btn {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none;
+    }
+
+    .fa-solid {
+      font-size: 1.6rem;
+      transition: color 200ms;
+    }
+
+    .fa-solid:hover {
+      color: $tertiary-color;
     }
   }
 }
@@ -178,4 +208,8 @@
       text-align: center;
     }
   }
+}
+
+.hidden {
+  visibility: hidden;
 }

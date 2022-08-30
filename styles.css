@@ -109,13 +109,35 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    gap: 0.8rem;
+    gap: 1.7rem;
     list-style-type: none;
-    padding: 0.5rem;
+    padding: 1.4rem;
     font-size: 1.3rem; }
+    .search-results__results li {
+      text-align: center; }
+    .search-results__results a {
+      all: unset;
+      cursor: pointer; }
     .search-results__results p {
       color: #a27b5c;
       font-size: 1.1rem; }
+  .search-results__pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 1.4rem; }
+    .search-results__pagination--btn {
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      outline: none; }
+    .search-results__pagination .fa-solid {
+      font-size: 1.6rem;
+      transition: color 200ms; }
+    .search-results__pagination .fa-solid:hover {
+      color: #a27b5c; }
 
 .recipe {
   display: flex;
@@ -186,3 +208,6 @@ body {
       gap: 2.5rem 3rem; }
     .recipe__ingredients li {
       text-align: center; }
+
+.hidden {
+  visibility: hidden; }
