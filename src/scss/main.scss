@@ -144,9 +144,14 @@
   gap: 4rem;
 
   button {
-    background-color: transparent;
     border: none;
     outline: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  button:hover {
+    color: $tertiary-color;
   }
 
   &__message {
@@ -186,6 +191,7 @@
     .fa-regular,
     .fa-solid {
       font-size: 1.4rem;
+      padding: 0.6rem;
     }
   }
 

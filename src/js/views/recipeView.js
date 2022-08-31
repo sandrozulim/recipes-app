@@ -41,13 +41,20 @@ class RecipeView extends View {
       <p>
         <i class="fa-solid fa-people-group"></i>
         ${this._data.servings}
+
+        <button>
         <i class="fa-solid fa-plus servings" data-update-to="${
           this._data.servings + 1
         }"></i>
+        </button>
+
+        <button>
         <i class="fa-solid fa-minus servings" data-update-to="${
           this._data.servings - 1
         }"></i>
-      </p>
+        </button>
+      
+        </p>
 
       <button>
         <i class="fa-regular fa-bookmark"></i>

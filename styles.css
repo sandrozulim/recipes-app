@@ -149,9 +149,12 @@ body {
   border-radius: 0.5rem;
   gap: 4rem; }
   .recipe button {
-    background-color: transparent;
     border: none;
-    outline: none; }
+    outline: none;
+    background-color: transparent;
+    cursor: pointer; }
+  .recipe button:hover {
+    color: #a27b5c; }
   .recipe__message {
     display: flex;
     flex-direction: column;
@@ -189,7 +192,8 @@ body {
     font-size: 1.3rem; }
     .recipe__details .fa-regular,
     .recipe__details .fa-solid {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      padding: 0.6rem; }
   .recipe__ingredients {
     display: flex;
     flex-direction: column;
