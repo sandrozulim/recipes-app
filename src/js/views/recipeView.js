@@ -10,6 +10,16 @@ class RecipeView extends View {
     );
   }
 
+  addHandlerUpdateServings(handler) {
+    this._parentElement.addEventListener("click", (e) => {
+      const btn = e.target.closest(".servings");
+      if (!btn) return;
+
+      const updateTo = +btn.dataset.updateTo;
+      if (updateTo > 0) handler(updateTo);
+    });
+  }
+
   _generateMarkup() {
     return `
 <figure class="recipe__fig">
@@ -31,8 +41,12 @@ class RecipeView extends View {
       <p>
         <i class="fa-solid fa-people-group"></i>
         ${this._data.servings}
-        <i class="fa-solid fa-plus"></i>
-        <i class="fa-solid fa-minus"></i>
+        <i class="fa-solid fa-plus servings" data-update-to="${
+          this._data.servings + 1
+        }"></i>
+        <i class="fa-solid fa-minus servings" data-update-to="${
+          this._data.servings - 1
+        }"></i>
       </p>
 
       <button>
