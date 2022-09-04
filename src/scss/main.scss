@@ -84,10 +84,9 @@
   &__results {
     @include flex(column, center, center, nowrap);
     gap: 1.7rem;
-
     font-size: 1.3rem;
 
-    p {
+    &--publisher {
       color: $tertiary-color;
       font-size: 1.1rem;
     }
@@ -96,7 +95,7 @@
   &__pagination {
     @include flex(row, space-between, center, nowrap);
     padding: 1.4rem;
-    ///////////////////////////////
+
     &--btn {
       cursor: pointer;
       background-color: transparent;
@@ -115,8 +114,10 @@
   &__message {
     @include flex(column, center, center, nowrap);
     height: 100%;
-    font-size: 1.4rem;
     gap: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $alert-color;
 
     .fa-solid {
       font-size: 2.2rem;

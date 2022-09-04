@@ -29,7 +29,7 @@ export default class View {
     const markup = `
     <div class="recipe__message">
       <p> ${message}</p>
-    </div>;
+    </div>
     `;
 
     this._clear();

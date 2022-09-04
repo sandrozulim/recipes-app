@@ -13,7 +13,7 @@ class ResultsView extends View {
      <li>
           <a href="#${result.id}">
              <h4>${result.title}</h4>
-             <p>${result.publisher}</p> 
+             <p class="search-results__results--publisher">${result.publisher}</p> 
           </a>
      </li>
     `;

@@ -151,7 +151,7 @@ img {
     flex-wrap: nowrap;
     gap: 1.7rem;
     font-size: 1.3rem; }
-    .search-results__results p {
+    .search-results__results--publisher {
       color: #a27b5c;
       font-size: 1.1rem; }
   .search-results__pagination {
@@ -183,8 +183,10 @@ img {
     align-items: center;
     flex-wrap: nowrap;
     height: 100%;
+    gap: 1rem;
+    text-align: center;
     font-size: 1.4rem;
-    gap: 1rem; }
+    color: #a62349; }
     .recipe__message .fa-solid {
       font-size: 2.2rem; }
   .recipe__fig {
