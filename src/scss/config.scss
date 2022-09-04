@@ -1,6 +1,7 @@
 $primary-color: #2c3639;
 $secondary-color: #dcd7c9;
 $tertiary-color: #a27b5c;
+$highlight-color: #d0ccbf;
 
 @mixin flex($dir, $just, $align, $wrap) {
   display: flex;

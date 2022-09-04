@@ -1,25 +1,5 @@
 @import "./config.scss";
 
-.spinner {
-  margin: 5rem auto;
-  text-align: center;
-
-  i {
-    font-size: 2.6rem;
-    animation: rotate 2s infinite linear;
-  }
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .main {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -33,25 +13,10 @@
   @include flex(row, space-between, center, nowrap);
   grid-column: 1/3;
   gap: 1.5rem;
+  position: relative;
 
   .fa-solid {
-    font-size: 1.7rem;
-    opacity: 0.7;
-    transition: opacity 300ms;
-    margin-left: 0.7rem;
-
-    &:hover {
-      opacity: 1;
-    }
-  }
-
-  button {
-    @include flex(row, center, center, nowrap);
-    background-color: transparent;
     color: $secondary-color;
-    outline: none;
-    border: none;
-    cursor: pointer;
   }
 
   &__title {
@@ -86,6 +51,29 @@
     @include flex(row, center, center, nowrap);
     gap: 1rem;
   }
+
+  /* .btn-bookmark:hover + .header__bookmarks {
+    visibility: visible;
+  } */
+
+  &__bookmarks {
+    background-color: $secondary-color;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    right: 0;
+    top: 4rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms 250ms;
+    box-shadow: -5px 8px 8px $primary-color;
+
+    &:hover,
+    .btn-bookmark:hover + & {
+      visibility: visible;
+      opacity: 0.9;
+    }
+  }
 }
 
 .search-results {
@@ -96,18 +84,8 @@
   &__results {
     @include flex(column, center, center, nowrap);
     gap: 1.7rem;
-    list-style-type: none;
-    padding: 1.4rem;
+
     font-size: 1.3rem;
-
-    li {
-      text-align: center;
-    }
-
-    a {
-      all: unset;
-      cursor: pointer;
-    }
 
     p {
       color: $tertiary-color;
@@ -118,21 +96,12 @@
   &__pagination {
     @include flex(row, space-between, center, nowrap);
     padding: 1.4rem;
-
+    ///////////////////////////////
     &--btn {
       cursor: pointer;
       background-color: transparent;
       border: none;
       outline: none;
-    }
-
-    .fa-solid {
-      font-size: 1.6rem;
-      transition: color 200ms;
-    }
-
-    .fa-solid:hover {
-      color: $tertiary-color;
     }
   }
 }
@@ -142,17 +111,6 @@
   background-color: $secondary-color;
   border-radius: 0.5rem;
   gap: 4rem;
-
-  button {
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  button:hover {
-    color: $tertiary-color;
-  }
 
   &__message {
     @include flex(column, center, center, nowrap);
@@ -172,14 +130,8 @@
 
     &--title {
       font-size: 1.8rem;
+      text-align: center;
       text-shadow: 0px 0px 1px black;
-      border-bottom: 1px solid black;
-    }
-
-    img {
-      width: 100%;
-      height: 20rem;
-      object-fit: cover;
     }
   }
 
@@ -188,10 +140,30 @@
     width: 100%;
     font-size: 1.3rem;
 
-    .fa-regular,
-    .fa-solid {
-      font-size: 1.4rem;
-      padding: 0.6rem;
+    .bookmarked {
+      color: $tertiary-color;
+      animation: bounce 700ms;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateX(0.6rem);
+      }
+      20% {
+        transform: translateX(-0.5rem);
+      }
+      40% {
+        transform: translateX(0.4rem);
+      }
+      60% {
+        transform: translateX(-0.3rem);
+      }
+      80% {
+        transform: translateX(0.2rem);
+      }
+      100% {
+        transform: translateX(0);
+      }
     }
   }
 
@@ -208,10 +180,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 2.5rem 3rem;
-    }
-
-    li {
-      text-align: center;
     }
   }
 }

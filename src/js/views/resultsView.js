@@ -11,10 +11,10 @@ class ResultsView extends View {
   _generateMarkupResults(result) {
     return `
      <li>
-             <a href="#${result.id}">
+          <a href="#${result.id}">
              <h4>${result.title}</h4>
              <p>${result.publisher}</p> 
-             </a>
+          </a>
      </li>
     `;
   }

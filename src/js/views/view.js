@@ -29,7 +29,6 @@ export default class View {
     const markup = `
     <div class="recipe__message">
       <p> ${message}</p>
-      <i class="fa-solid fa-face-frown-open"></i>
     </div>;
     `;
 
