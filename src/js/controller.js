@@ -80,12 +80,19 @@ const controlAddRecipe = async function (newRecipe) {
     //Rendering loading spinner
     addRecipeView.renderSpinner();
 
-    //Render recipe
+    //Uplooad new recipe
     await model.uploadRecipe(newRecipe);
+
+    //Render recipe
     recipeView.render(model.state.recipe);
 
     // Rendering success message
     addRecipeView.renderError(addRecipeView._message);
+
+    //Render bookmarks view
+    bookmarksView.render(model.state.bookmarks);
+    // Replace id in URL with history web API
+    window.history.pushState("null", "", `#${model.state.recipe.id}`);
 
     // Closing modal after 2.5 seconds
     setTimeout(() => {

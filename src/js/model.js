@@ -23,8 +23,8 @@ const createRecipeObject = function (data) {
     servings: recipe.servings,
     cookingTime: recipe.cooking_time,
     ingredients: recipe.ingredients,
-    /* ...(recipe.key && { key: recipe.key }), */
-    key: recipe.key ? recipe.key : null,
+    ...(recipe.key && { key: recipe.key }),
+    /* key: recipe.key ? recipe.key : null, */
   };
 };
 
@@ -45,7 +45,7 @@ export const loadSearchResults = async function (query) {
   try {
     state.search.query = query;
 
-    const data = await getJSON(`${API_URL}?search=${query}`);
+    const data = await getJSON(`${API_URL}?search=${query}&key=${KEY}`);
     state.search.results = data.data.recipes.map((rec) => {
       return {
         id: rec.id,

@@ -203,12 +203,12 @@
 }
 
 .upload {
-  @include flex(row, center, center, wrap);
+  @include flex(column, space-between, center, nowrap);
   gap: 2rem;
 
   &__column {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
     gap: 2rem;
     font-size: 1.3rem;
