@@ -77,6 +77,7 @@
 }
 
 .search-results {
+  @include flex(column, flex-start, space-between, nowrap);
   background-color: $secondary-color;
   border-radius: 0.5rem;
   min-height: 70vh;
@@ -101,6 +102,12 @@
       background-color: transparent;
       border: none;
       outline: none;
+    }
+
+    span {
+      color: $tertiary-color;
+      font-size: 1.3rem;
+      font-weight: 600;
     }
   }
 }

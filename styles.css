@@ -140,6 +140,11 @@ img {
       opacity: 0.9; }
 
 .search-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+  flex-wrap: nowrap;
   background-color: #dcd7c9;
   border-radius: 0.5rem;
   min-height: 70vh; }
@@ -166,6 +171,10 @@ img {
       background-color: transparent;
       border: none;
       outline: none; }
+    .search-results__pagination span {
+      color: #a27b5c;
+      font-size: 1.3rem;
+      font-weight: 600; }
 
 .recipe {
   display: flex;

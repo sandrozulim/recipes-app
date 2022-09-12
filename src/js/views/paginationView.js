@@ -10,7 +10,6 @@ class PaginationView extends View {
       if (!btn) return;
 
       const goToPage = +btn.dataset.goto;
-      console.log(goToPage);
 
       handler(goToPage);
     });
@@ -30,6 +29,7 @@ class PaginationView extends View {
               curPage - 1
             }" class="fa-solid fa-circle-chevron-left"></i>
           </button>
+          <span>${curPage} / ${numberOfPages}</span>
       <button  class="search-results__pagination--btn">
             <i data-goto="${
               curPage + 1
@@ -46,6 +46,7 @@ class PaginationView extends View {
               curPage - 1
             }" class="fa-solid fa-circle-chevron-left"></i>
           </button>
+          <span>${curPage} / ${numberOfPages}</span>
           <button  class="search-results__pagination--btn hidden">
             <i data-goto="${
               curPage + 1
@@ -62,6 +63,7 @@ class PaginationView extends View {
               curPage - 1
             }" class="fa-solid fa-circle-chevron-left "></i>
           </button>
+          <span>${curPage} / ${numberOfPages}</span>
           <button  class="search-results__pagination--btn">
             <i data-goto="${
               curPage + 1
